@@ -1,0 +1,2 @@
+v1	named	intermediary
+FIELD	net/fabricmc/duckmod/mixin/DuckModMixinEgg	Lnet/minecraft/client/world/ClientWorld;	world	field_3699

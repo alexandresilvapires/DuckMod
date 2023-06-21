@@ -1,0 +1,11 @@
+{
+    "item.duckmod.duck_egg": "鴨の卵",
+    "item.duckmod.duck_spawn_egg": "鴨の産卵卵",
+    "entity_type.duckmod.duck": "鴨",
+    "sound_event.duckmod.duckquack1": "鴨の鳴き声",
+    "sound_event.duckmod.duckquack2": "鴨の鳴き声",
+    "sound_event.duckmod.duckquack3": "鴨の鳴き声",
+    "sound_event.duckmod.duckhurt1": "鴨が痛い",
+    "sound_event.duckmod.duckhurt2": "鴨が痛い",
+    "sound_event.duckmod.duckdeath": "鴨が死ぬ"
+}

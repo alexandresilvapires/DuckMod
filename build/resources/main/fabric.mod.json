@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "duckmod",
+  "version": "1.1.1",
+
+  "name": "Duck Mod",
+  "description": "Adds ducks to Minecraft, as requested by the Duck Queen herself!",
+  "authors": [
+    "Alexandre Pires"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/duckmod/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.fabricmc.duckmod.DuckMod"
+    ]
+  },
+  "mixins": [
+    "duckmod.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.20.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
