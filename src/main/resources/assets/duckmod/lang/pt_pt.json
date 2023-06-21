@@ -1,0 +1,11 @@
+{
+    "item.duckmod.duck_egg": "Ovo de Pato",
+    "item.duckmod.duck_spawn_egg": "Ovo Gerador de Patos",
+    "entity_type.duckmod.duck": "Pato",
+    "sound_event.duckmod.duckquack1": "Pato faz Quack",
+    "sound_event.duckmod.duckquack2": "Pato faz Quack",
+    "sound_event.duckmod.duckquack3": "Pato faz Quack",
+    "sound_event.duckmod.duckhurt1": "Pato magoa-se",
+    "sound_event.duckmod.duckhurt2": "Pato magoa-se",
+    "sound_event.duckmod.duckdeath": "Pato morre"
+}

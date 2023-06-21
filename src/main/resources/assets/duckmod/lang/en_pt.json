@@ -1,0 +1,11 @@
+{
+    "item.duckmod.duck_egg": "Ducky Egg'o",
+    "item.duckmod.duck_spawn_egg": "Ducky Summonin' Egg'o",
+    "entity_type.duckmod.duck": "Ducky",
+    "sound_event.duckmod.duckquack1": "Ducky quacks",
+    "sound_event.duckmod.duckquack2": "Ducky quacks",
+    "sound_event.duckmod.duckquack3": "Ducky quacks",
+    "sound_event.duckmod.duckhurt1": "Ducky hurtin'",
+    "sound_event.duckmod.duckhurt2": "Ducky hurtin'",
+    "sound_event.duckmod.duckdeath": "Ducky sinkin'"
+}

@@ -1,0 +1,43 @@
+{
+    "duck_say1": {
+        "subtitle": "duckmod.duckquack1",
+        "sounds": [
+            "duckmod:say1"
+        ]
+    },
+
+    "duck_say2": {
+        "subtitle": "duckmod.duckquack2",
+        "sounds": [
+            "duckmod:say2"
+        ]
+    },
+
+    "duck_say3": {
+        "subtitle": "duckmod.duckquack3",
+        "sounds": [
+            "duckmod:say3"
+        ]
+    },
+
+    "duck_hurt1": {
+        "subtitle": "duckmod.duckhurt1",
+        "sounds": [
+            "duckmod:hurt1"
+        ]
+    },
+
+    "duck_hurt2": {
+        "subtitle": "duckmod.duckhurt1",
+        "sounds": [
+            "duckmod:hurt1"
+        ]
+    },
+
+    "duck_death": {
+        "subtitle": "duckmod.duckdeath",
+        "sounds": [
+            "duckmod:death"
+        ]
+    }
+}
