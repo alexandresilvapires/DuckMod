@@ -1,4 +1,4 @@
-package net.fabricmc.duckmod;
+package duckmod;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -45,7 +45,7 @@ public class DuckEggEntity extends ThrownItemEntity {
     protected void onEntityHit(EntityHitResult entityHitResult) {
         super.onEntityHit(entityHitResult);
         Entity entity = entityHitResult.getEntity();
-        //entity.damage(DamageSources.thrown(this, this.getOwner()), 0.0F);
+        entity.damage(this.getWorld().getDamageSources().thrown(this, this.getOwner()), 0.0F);
     }
 
     protected void onCollision(HitResult hitResult) {

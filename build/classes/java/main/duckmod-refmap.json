@@ -1,19 +1,25 @@
 {
   "mappings": {
-    "net/fabricmc/duckmod/mixin/DuckModMixin": {
+    "duckmod/mixin/DuckModMixin": {
       "addFarmAnimals(Lnet/minecraft/world/biome/SpawnSettings$Builder;)V": "Lnet/minecraft/class_3864;method_30580(Lnet/minecraft/class_5483$class_5496;)V"
     },
-    "net/fabricmc/duckmod/mixin/DuckModMixinEgg": {
+    "duckmod/mixin/DuckModMixinEgg": {
       "onEntitySpawn": "Lnet/minecraft/class_634;method_11112(Lnet/minecraft/class_2604;)V"
+    },
+    "duckmod/mixin/ExampleMixin": {
+      "loadWorld": "Lnet/minecraft/server/MinecraftServer;method_3735()V"
     }
   },
   "data": {
     "named:intermediary": {
-      "net/fabricmc/duckmod/mixin/DuckModMixin": {
+      "duckmod/mixin/DuckModMixin": {
         "addFarmAnimals(Lnet/minecraft/world/biome/SpawnSettings$Builder;)V": "Lnet/minecraft/class_3864;method_30580(Lnet/minecraft/class_5483$class_5496;)V"
       },
-      "net/fabricmc/duckmod/mixin/DuckModMixinEgg": {
+      "duckmod/mixin/DuckModMixinEgg": {
         "onEntitySpawn": "Lnet/minecraft/class_634;method_11112(Lnet/minecraft/class_2604;)V"
+      },
+      "duckmod/mixin/ExampleMixin": {
+        "loadWorld": "Lnet/minecraft/server/MinecraftServer;method_3735()V"
       }
     }
   }

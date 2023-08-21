@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "duckmod",
-  "version": "1.1.1",
+  "version": "1.0.0",
 
   "name": "Duck Mod",
   "description": "Adds ducks to Minecraft, as requested by the Duck Queen herself!",
@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.duckmod.DuckMod"
+      "duckmod.DuckMod"
     ]
   },
   "mixins": [

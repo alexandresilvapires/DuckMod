@@ -1,4 +1,4 @@
-package net.fabricmc.duckmod;
+package duckmod;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
@@ -11,19 +11,26 @@ import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Items;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.registry.Registries;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 
 public class DuckMod implements ModInitializer {
 	// Creates instance of duck egg item
 	public static final Item DUCK_EGG = new DuckEggItem(new Item.Settings().maxCount(16));
-	//ItemGroupEvents.modifyEntriesEvent(ItemGroups.MATERIALS).register(entries -> entries.add(DUCK_EGG));
+
 
 	public static final EntityModelLayer DUCK_LAYER = new EntityModelLayer(new Identifier("duck", "duck"), "main");
 
@@ -41,7 +48,6 @@ public class DuckMod implements ModInitializer {
 
 	//Instance of duck spawn egg
 	public static final SpawnEggItem DUCK_SPAWN_EGG = new SpawnEggItem(DUCK, 0x65573e, 0xffad00,new Item.Settings());
-	//ItemGroupEvents.modifyEntriesEvent(ItemGroups.MISC).register(entries -> entries.add(DUCK_SPAWN_EGG));
 
 
 	//Duck sounds
@@ -86,5 +92,14 @@ public class DuckMod implements ModInitializer {
 		Registry.register(Registries.SOUND_EVENT, DuckMod.DUCK_HURT1_ID, DUCK_HURT1);
 		Registry.register(Registries.SOUND_EVENT, DuckMod.DUCK_HURT2_ID, DUCK_HURT2);
 		Registry.register(Registries.SOUND_EVENT, DuckMod.DUCK_DEATH_ID, DUCK_DEATH);
+
+
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(DUCK_EGG));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(entries -> entries.add(DUCK_SPAWN_EGG));
+
+
+		// Set spawns
+		BiomeModifications.addSpawn(BiomeSelectors.tag(BiomeTags.IS_RIVER),
+                SpawnGroup.CREATURE, DuckMod.DUCK, 5, 2, 5);
 	}
 }

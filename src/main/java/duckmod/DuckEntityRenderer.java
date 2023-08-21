@@ -1,4 +1,4 @@
-package net.fabricmc.duckmod;
+package duckmod;
 
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
@@ -16,7 +16,7 @@ public class DuckEntityRenderer
 extends MobEntityRenderer<DuckEntity, DuckEntityModel<DuckEntity>> {
 
     public DuckEntityRenderer(EntityRendererFactory.Context context) {
-        super(context, new DuckEntityModel<net.fabricmc.duckmod.DuckEntity>(context.getPart(DuckMod.DUCK_LAYER)), 0.3f);
+        super(context, new DuckEntityModel<duckmod.DuckEntity>(context.getPart(DuckMod.DUCK_LAYER)), 0.3f);
     }
 
     @Override

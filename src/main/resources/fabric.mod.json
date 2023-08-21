@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.duckmod.DuckMod"
+      "duckmod.DuckMod"
     ]
   },
   "mixins": [

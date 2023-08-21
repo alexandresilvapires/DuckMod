@@ -1,7 +1,7 @@
-package net.fabricmc.duckmod.mixin;
+package duckmod.mixin;
 
-import net.fabricmc.duckmod.DuckEntity;
-import net.fabricmc.duckmod.DuckMod;
+import duckmod.DuckEntity;
+import duckmod.DuckMod;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.world.biome.SpawnSettings;
@@ -18,6 +18,6 @@ public class DuckModMixin{
 			
 	@Inject(method = "addFarmAnimals(Lnet/minecraft/world/biome/SpawnSettings$Builder;)V", at = @At("HEAD"), cancellable = true)
 	private static void addFarmAnimals(net.minecraft.world.biome.SpawnSettings.Builder builder, CallbackInfo info) {
-		builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(DUCK, 10, 4, 4));
+		builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(DUCK, 10, 2, 5));
 	}
 }

@@ -1,4 +1,4 @@
-package net.fabricmc.duckmod.mixin;
+package duckmod.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -8,8 +8,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.duckmod.DuckEggEntity;
-import net.fabricmc.duckmod.DuckMod;
+import duckmod.DuckEggEntity;
+import duckmod.DuckMod;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.Entity;

@@ -1,4 +1,4 @@
-package net.fabricmc.duckmod;
+package duckmod;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.EggItem;
