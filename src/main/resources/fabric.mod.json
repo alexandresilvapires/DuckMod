@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "duckmod.DuckMod"
+    ],
+    "client": [
+      "duckmod.DuckModClient"
     ]
   },
   "mixins": [
