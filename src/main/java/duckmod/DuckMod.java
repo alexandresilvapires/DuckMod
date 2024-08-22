@@ -31,9 +31,6 @@ public class DuckMod implements ModInitializer {
 	// Creates instance of duck egg item
 	public static final Item DUCK_EGG = new DuckEggItem(new Item.Settings().maxCount(16));
 
-
-	public static final EntityModelLayer DUCK_LAYER = new EntityModelLayer(new Identifier("duck", "duck"), "main");
-
 	//Thrown duck egg entity
 	public static final EntityType<DuckEggEntity> DUCK_EGG_ENTITY = Registry.register(
 		Registries.ENTITY_TYPE,
@@ -78,13 +75,6 @@ public class DuckMod implements ModInitializer {
 		//Mob registers
 		FabricDefaultAttributeRegistry.register(DUCK, DuckEntity.createDuckAttributes());
 
-		//Renderer register
-		EntityRendererRegistry.register(DuckMod.DUCK, (context) -> {
-			return new DuckEntityRenderer(context);
-		});
-		EntityModelLayerRegistry.registerModelLayer(DUCK_LAYER, DuckEntityModel::getTexturedModelData);
-		EntityRendererRegistry.register(DuckMod.DUCK_EGG_ENTITY, (dispatcher) -> new FlyingItemEntityRenderer<DuckEggEntity>(dispatcher, 1.0f,false));
-		
 		//Sound register
 		Registry.register(Registries.SOUND_EVENT, DuckMod.DUCK_SAY1_ID, DUCK_SAY1);
 		Registry.register(Registries.SOUND_EVENT, DuckMod.DUCK_SAY2_ID, DUCK_SAY2);
