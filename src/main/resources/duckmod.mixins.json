@@ -1,15 +1,14 @@
 {
-  "required": true,
-  "minVersion": "0.8",
-  "package": "duckmod.mixin",
-  "compatibilityLevel": "JAVA_16",
-  "mixins": [
-  ],
-  "client": [
-    "DuckModMixin",
-    "DuckModMixinEgg"
-  ],
-  "injectors": {
-    "defaultRequire": 1
-  }
+	"required": true,
+	"package": "alexduckmod.duckmod.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ExampleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
 }
