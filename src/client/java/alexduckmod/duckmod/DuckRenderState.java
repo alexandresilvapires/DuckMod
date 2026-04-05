@@ -7,8 +7,7 @@ public class DuckRenderState extends LivingEntityRenderState {
    public float flap;
    public float flapSpeed;
    public @Nullable Duck duck;
-   public @Nullable boolean parking;
-   public @Nullable boolean isBaby;
+   public boolean parking;
 
    public DuckRenderState() {
       super();

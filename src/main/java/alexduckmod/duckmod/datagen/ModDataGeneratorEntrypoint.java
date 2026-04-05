@@ -12,7 +12,7 @@ public class ModDataGeneratorEntrypoint implements DataGeneratorEntrypoint
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator)
     {
         var pack = fabricDataGenerator.createPack();
-        pack.addProvider(ModEntityLootTableProvider::new);
+        pack.addProvider(ModEntityLootProvider::new);
     }
 
     // @Override

@@ -1,7 +1,6 @@
 package alexduckmod.duckmod;
 
 import java.util.Set;
-
 import net.minecraft.client.model.BabyModelTransform;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelPart;
@@ -12,18 +11,17 @@ import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.MeshTransformer;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.util.Mth;
-import net.minecraft.client.model.BabyModelTransform;
 
-public class DuckModel  extends EntityModel<DuckRenderState> {
+public class DuckModel extends EntityModel<DuckRenderState> {
     public static final String RED_THING = "red_thing";
     public static final float Y_OFFSET = 16.0F;
     public static final MeshTransformer BABY_TRANSFORMER = new BabyModelTransform(false, 5.0F, 2.0F, 2.0F, 1.99F, 24.0F, Set.of("head", "beak", "red_thing"));
+    
     private final ModelPart head;
     private final ModelPart rightLeg;
     private final ModelPart leftLeg;
     private final ModelPart rightWing;
     private final ModelPart leftWing;
-
     private final ModelPart body;
     private final ModelPart beak;
     private final ModelPart redThing;
@@ -39,8 +37,8 @@ public class DuckModel  extends EntityModel<DuckRenderState> {
         super(modelPart);
         this.head = modelPart.getChild("head");
         this.body = modelPart.getChild("body");
-        this.beak = this.head.getChild("beak");       // beak is under head
-        this.redThing = this.head.getChild("red_thing"); // red_thing is under head
+        this.beak = this.head.getChild("beak");
+        this.redThing = this.head.getChild("red_thing");
         this.rightLeg = modelPart.getChild("right_leg");
         this.leftLeg = modelPart.getChild("left_leg");
         this.rightWing = modelPart.getChild("right_wing");
@@ -57,6 +55,11 @@ public class DuckModel  extends EntityModel<DuckRenderState> {
     public static LayerDefinition createBodyLayer() {
         MeshDefinition meshDefinition = createBaseChickenModel();
         return LayerDefinition.create(meshDefinition, 64, 32);
+    }
+
+    public static LayerDefinition createBabyLayer() {
+        MeshDefinition meshDefinition = createBaseChickenModel();
+        return LayerDefinition.create(BABY_TRANSFORMER.apply(meshDefinition), 64, 32);
     }
 
     protected static MeshDefinition createBaseChickenModel() {
@@ -77,7 +80,6 @@ public class DuckModel  extends EntityModel<DuckRenderState> {
     public void setupAnim(DuckRenderState duckRenderState) {
         super.setupAnim(duckRenderState);
 
-        // Usual animation
         float f = (Mth.sin(duckRenderState.flap) + 1.0F) * duckRenderState.flapSpeed;
         this.head.xRot = duckRenderState.xRot * ((float)Math.PI / 180F);
         this.head.yRot = duckRenderState.yRot * ((float)Math.PI / 180F);
@@ -89,12 +91,9 @@ public class DuckModel  extends EntityModel<DuckRenderState> {
         this.rightWing.zRot = f;
         this.leftWing.zRot = -f;
 
-        // --- SITTING / PARKING ---
         if (duckRenderState.duck != null && duckRenderState.parking) {
             this.body.y = body_original + 4.0F;
             this.head.y = head_original + 4.0F;
-            // this.beak.y = beak_original + 4.0F;
-            // this.redThing.y = redThing_original + 4.0F;
             this.rightWing.y = rightWing_original + 4.0F;
             this.leftWing.y = leftWing_original + 4.0F;
 
@@ -109,17 +108,4 @@ public class DuckModel  extends EntityModel<DuckRenderState> {
             this.leftWing.y = leftWing_original;
         }
     }
-
-    // public void setupAnim(DuckRenderState duckRenderState) {
-    //     super.setupAnim(duckRenderState);
-    //     float f = (Mth.sin((double)duckRenderState.flap) + 1.0F) * duckRenderState.flapSpeed;
-    //     this.head.xRot = duckRenderState.xRot * 0.017453292F;
-    //     this.head.yRot = duckRenderState.yRot * 0.017453292F;
-    //     float g = duckRenderState.walkAnimationSpeed;
-    //     float h = duckRenderState.walkAnimationPos;
-    //     this.rightLeg.xRot = Mth.cos((double)(h * 0.6662F)) * 1.4F * g;
-    //     this.leftLeg.xRot = Mth.cos((double)(h * 0.6662F + 3.1415927F)) * 1.4F * g;
-    //     this.rightWing.zRot = f;
-    //     this.leftWing.zRot = -f;
-    // }
 }
