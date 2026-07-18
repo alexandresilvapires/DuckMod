@@ -2,7 +2,6 @@ package alexduckmod.duckmod;
 
 import java.util.function.Supplier;
 
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -39,21 +38,3 @@ public class ModEntities {
                 .build(DUCK_EGG_KEY)
         );
     }
-// public class ModEntities {
-//     public static Supplier<EntityType<Duck>> DUCK;
-
-//     public ModEntities()
-//     {
-//         DUCK = registerEntityType("duck_entity", EntityType.Builder.of(Duck::new, MobCategory.CREATURE));
-//     }
-
-//     public <T extends Entity> Supplier<EntityType<T>> registerEntityType(String name, EntityType.Builder<T> builder)
-//     {
-//         var entityType = Registry.register(
-//             BuiltInRegistries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(Duckmod.MOD_ID, name),
-//             builder.build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(Duckmod.MOD_ID, name)))
-//         );
-        
-//         return () -> entityType;
-//     }
-// }

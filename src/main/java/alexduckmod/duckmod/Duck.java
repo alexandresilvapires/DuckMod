@@ -514,6 +514,8 @@ public class Duck extends Animal {
         }
     }
     static {
-        BABY_DIMENSIONS = EntityType.CHICKEN.getDimensions().scale(0.5F).withEyeHeight(0.2975F);
+        BABY_DIMENSIONS = BuiltInRegistries.ENTITY_TYPE.getValue(Identifier.withDefaultNamespace("chicken")).getDimensions().scale(0.5F).withEyeHeight(0.2975F);
+
+        //BABY_DIMENSIONS = EntityType.CHICKEN.getDimensions().scale(0.5F).withEyeHeight(0.2975F);
     }
 }
