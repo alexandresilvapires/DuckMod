@@ -2,12 +2,15 @@
   "required": true,
   "minVersion": "0.8",
   "package": "duckmod.mixin",
-  "compatibilityLevel": "JAVA_16",
+  "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "MixinChickenEntity",
+    "MobEntityAccessor"
   ],
   "client": [
     "DuckModMixin",
-    "DuckModMixinEgg"
+    "DuckModMixinEgg",
+    "MixinChickenEntityModel"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -8,6 +8,18 @@
     },
     "duckmod/mixin/ExampleMixin": {
       "loadWorld": "Lnet/minecraft/server/MinecraftServer;method_3735()V"
+    },
+    "duckmod/mixin/MixinChickenEntity": {
+      "<init>": "Lnet/minecraft/class_1428;<init>(Lnet/minecraft/class_1299;Lnet/minecraft/class_1937;)V",
+      "initGoals": "Lnet/minecraft/class_1428;method_5959()V",
+      "readCustomDataFromNbt": "Lnet/minecraft/class_1428;method_5749(Lnet/minecraft/class_2487;)V",
+      "writeCustomDataToNbt": "Lnet/minecraft/class_1428;method_5652(Lnet/minecraft/class_2487;)V"
+    },
+    "duckmod/mixin/MixinChickenEntityModel": {
+      "setAngles": "Lnet/minecraft/class_558;method_2819(Lnet/minecraft/class_1297;FFFFF)V"
+    },
+    "duckmod/mixin/MobEntityAccessor": {
+      "goalSelector": "field_6201:Lnet/minecraft/class_1355;"
     }
   },
   "data": {
@@ -20,6 +32,18 @@
       },
       "duckmod/mixin/ExampleMixin": {
         "loadWorld": "Lnet/minecraft/server/MinecraftServer;method_3735()V"
+      },
+      "duckmod/mixin/MixinChickenEntity": {
+        "<init>": "Lnet/minecraft/class_1428;<init>(Lnet/minecraft/class_1299;Lnet/minecraft/class_1937;)V",
+        "initGoals": "Lnet/minecraft/class_1428;method_5959()V",
+        "readCustomDataFromNbt": "Lnet/minecraft/class_1428;method_5749(Lnet/minecraft/class_2487;)V",
+        "writeCustomDataToNbt": "Lnet/minecraft/class_1428;method_5652(Lnet/minecraft/class_2487;)V"
+      },
+      "duckmod/mixin/MixinChickenEntityModel": {
+        "setAngles": "Lnet/minecraft/class_558;method_2819(Lnet/minecraft/class_1297;FFFFF)V"
+      },
+      "duckmod/mixin/MobEntityAccessor": {
+        "goalSelector": "field_6201:Lnet/minecraft/class_1355;"
       }
     }
   }
